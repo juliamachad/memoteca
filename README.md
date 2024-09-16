@@ -1,27 +1,62 @@
 # Memoteca
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+Memoteca is a project developed with Angular that uses a mock backend to provide data through a simple REST API. The backend is created and managed with `json-server`, which generates a REST API from a JSON file. This project is ideal for front-end development and testing, providing a simulated environment for data manipulation.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **List Thoughts**: View all stored thoughts.
+- **Create Thought**: Add new thoughts to the collection.
+- **Edit Thought**: Update existing thoughts.
+- **Delete Thought**: Remove thoughts from the collection.
 
-## Code scaffolding
+## Project Structure
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Frontend**: Developed with Angular.
+  - Uses `HttpClient` for communication with the REST API.
+  - Includes a `PensamentoService` for performing CRUD (Create, Read, Update, Delete) operations on thoughts.
 
-## Build
+- **Backend**: Generated with `json-server`.
+  - **Data File**: `db.json`
+    - Stores thoughts.
+  - **Server**: Configured to run on port 3000.
+  - **Start Command**: `npm start`, which starts `json-server` and serves the API.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Technologies Used
 
-## Running unit tests
+- **Angular**: Framework for building the user interface.
+- **json-server**: Creates a REST API from a JSON file.
+- **HTTP Client**: Used for making requests to the REST API in Angular.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation
 
-## Running end-to-end tests
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/usuario/memoteca.git
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+2. **Navigate to the Project Directory**
+   ```bash
+   cd memoteca
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+3. **Install Frontend Dependencies**
+   ```bash
+   cd frontend
+    npm install
+
+
+4. **Start the Backend Server**
+   ```bash
+   cd ../backend
+    npm install
+    npm start
+
+
+5. **Start the Frontend Server in another terminal**
+   ```bash
+    ng serve
+
+
+Access the Application on http://localhost:4200/ in your browser.
+
+![memoteca](https://github.com/user-attachments/assets/cb6c1870-98cc-4433-9d00-67853eb060d9)
